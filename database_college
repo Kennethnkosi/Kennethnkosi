@@ -1,0 +1,9 @@
+USE college;
+CREATE TABLE student(
+FirstName varchar,
+Surname varchar,
+Algebra int,
+Calculus int,
+Programming int,
+Databases_ int
+);
