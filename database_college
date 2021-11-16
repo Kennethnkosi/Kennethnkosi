@@ -1,9 +1,37 @@
-USE college;
-CREATE TABLE student(
-FirstName varchar,
-Surname varchar,
-Algebra int,
-Calculus int,
-Programming int,
-Databases_ int
-);
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="nKosizile1+"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("CREATE TABLE student(id INT AUTO_INCREMENT PRIMARY KEY,
+                                       firstname VARCHAR(255),
+                                       surname VARCHAR(255),
+                                       algebra INT(3),
+                                       calculus INT(3),
+                                       programming INT(3),
+                                       databases INT(3))")
+
+sql = "INSERT INTO student (firstname, surname, algebra, calculus, programming, databases) VALUES (%s, %s, %s, %s, %s, %s)"
+val = [
+    ('Joe', 'Soap', '92', '78', '65', '67'),
+    ('Jane', 'Doe', '81', '79', '83', '89'),
+    ('Mary', 'Poppins', '63', '52', '65', '71')
+    ('Mario', 'Rossi', '23', '42', '50', '44')
+    ('John', 'Smith', '56', '67', '72', '72')
+    ('Tom', 'Cruz', '81', '62', '53', '59')
+    ('Jim', 'Beglin', '41', '48', '51', '53')
+    ('Peter', 'Shmooks', '55', '55', '66', '58')
+    ('Hans', 'Meier', '57', '87', '95', '64')
+    ('Jackie', 'Brown', '97', '91', '86', '73')
+]
+
+mycursor.executemany(sql, val)
+
+mydb.commit()
+
+print(mycursor.rowcount, "record inserted.")
