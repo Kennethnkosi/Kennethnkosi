@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCSE Week 03 Project</title>
+    <script>
+        function toggleTable() {
+
+            document.getElementById("studentMarks").classList.toggle("hidden");
+
+        }
+    </script>
+    <style>
+        table,
+        th,
+        td {
+            background-color: cornflowerblue;
+            border: 1px solid burlywood;
+        }
+
+        .column {
+            text-align: center;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+        }
+
+        html {
+            background-color: mistyrose;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .hidden {
+
+            display: none;
+
+        }
+
+        button {
+            color: green;
+            background-color: lightskyblue;
+        }
+
+        button:hover {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-style: italic; text-align: center; color: olive;">
+        Technical Practices for Software Developers</h1>
+
+    <div class="result">
+        <button onClick="toggleTable()">Load Student Marks</button><br />
+    </div>
+    <hr>
+
+    <table class="hidden" id="studentMarks" style=" width: 100%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <caption style="font-size: x-large;"><b>Student Marks Table</b></caption>
+        <tr>
+            <th>Firstname</th>
+            <th>Surname</th>
+            <th>Algebra</th>
+            <th>Calculus</th>
+            <th>Programming</th>
+            <th>Databases</th>
+        </tr>
+        <tr class="column">
+            <td>Joe</td>
+            <td>Soap</td>
+            <td>92</td>
+            <td>78</td>
+            <td>65</td>
+            <td>67</td>
+        </tr>
+        <tr class="column">
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>81</td>
+            <td>79</td>
+            <td>83</td>
+            <td>89</td>
+        </tr>
+        <tr class="column">
+            <td>Mary</td>
+            <td>Poppins</td>
+            <td>63</td>
+            <td>52</td>
+            <td>65</td>
+            <td>71</td>
+        </tr>
+        <tr class="column">
+            <td>Mario</td>
+            <td>Rossi</td>
+            <td>23</td>
+            <td>42</td>
+            <td>50</td>
+            <td>44</td>
+        </tr>
+        <tr class="column">
+            <td>John</td>
+            <td>Smith</td>
+            <td>56</td>
+            <td>67</td>
+            <td>72</td>
+            <td>72</td>
+        </tr>
+        <tr class="column">
+            <td>Tom</td>
+            <td>Cruz</td>
+            <td>81</td>
+            <td>62</td>
+            <td>53</td>
+            <td>59</td>
+        </tr>
+        <tr class="column">
+            <td>Jim</td>
+            <td>Beglin</td>
+            <td>41</td>
+            <td>48</td>
+            <td>51</td>
+            <td>53</td>
+        </tr>
+        <tr class="column">
+            <td>Peter</td>
+            <td>Schmooks</td>
+            <td>55</td>
+            <td>55</td>
+            <td>66</td>
+            <td>58</td>
+        </tr>
+        <tr class="column">
+            <td>Hans</td>
+            <td>Meier</td>
+            <td>57</td>
+            <td>87</td>
+            <td>95</td>
+            <td>64</td>
+        </tr>
+        <tr class="column">
+            <td>Jackie</td>
+            <td>Brown</td>
+            <td>97</td>
+            <td>91</td>
+            <td>86</td>
+            <td>73</td>
+        </tr>
+    </table>
+</body>
+
+</html>
